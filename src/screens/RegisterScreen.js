@@ -67,7 +67,7 @@ function RegisterScreen() {
   }
 
   const registerAct = (enter) => {
-    alert(username + ' register success')
+    alert('register success')
   }
 
   return (
@@ -91,7 +91,6 @@ function RegisterScreen() {
               label="Password *" 
               mode='outlined'
               secureTextEntry={passwordVisible}
-              right={<TextInput.Icon name={passwordVisible ? "eye" : "eye-off"} onPress={() => setPasswordVisible(!passwordVisible)} />}
               onChangeText = {changePassword}
             />
             <TextInput 
@@ -182,9 +181,11 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 32,
     fontWeight: '600',
+    color: '#000000',
   },
   title: {
     marginTop: 30,
+    color: '#000000',
   },
   form: {
     margin: 12,

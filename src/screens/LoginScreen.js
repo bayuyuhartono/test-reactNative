@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { black } from 'react-native-paper/lib/typescript/styles/colors';
 
 function LoginScreen() {
   const navigation = useNavigation();
@@ -42,7 +43,7 @@ function LoginScreen() {
   }
 
   const loginAct = () => {
-    alert(username + ' login success')
+    alert('login success')
   }
 
   return (
@@ -67,7 +68,6 @@ function LoginScreen() {
             label="Password" 
             mode='outlined'
             secureTextEntry={passwordVisible}
-            right={<TextInput.Icon name={passwordVisible ? "eye" : "eye-off"} onPress={() => setPasswordVisible(!passwordVisible)} />}
             onChangeText = {passChange}
           /> : null
         }
@@ -109,11 +109,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   welcome: {
+    marginTop: 60,
     fontSize: 32,
     fontWeight: '600',
+    color: '#000000',
   },
   title: {
     marginTop: 30,
+    color: '#000000',
   },
   form: {
     margin: 12,
